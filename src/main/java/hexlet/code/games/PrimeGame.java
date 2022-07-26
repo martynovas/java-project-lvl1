@@ -31,7 +31,6 @@ public final class PrimeGame implements Game {
     private boolean numberIsPrime() {
         for (int i = number - 1; i > 1; i--) {
             if (number % i == 0) {
-                System.out.println(i);
                 return false;
             }
         }
