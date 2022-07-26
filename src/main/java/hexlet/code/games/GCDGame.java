@@ -5,7 +5,7 @@ import hexlet.code.Game;
 import java.util.Random;
 
 public final class GCDGame implements Game {
-    private static final int NUMBER_ORIGIN = 0;
+    private static final int NUMBER_ORIGIN = 2;
     private static final int NUMBER_BOUND = 100;
     private static Random random = new Random();
 
