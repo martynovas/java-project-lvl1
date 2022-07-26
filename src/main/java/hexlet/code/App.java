@@ -16,7 +16,7 @@ public class App {
     private static Scanner scanner = new Scanner(System.in);
 
     static {
-        games = new ArrayList();
+        games = new ArrayList<Game>();
         games.add(new GreetGame());
         games.add(new EvenGame());
         games.add(new CalcGame());
