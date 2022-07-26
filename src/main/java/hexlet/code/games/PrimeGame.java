@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public final class PrimeGame {
-    private static final int NUMBER_ORIGIN = 0;
+    private static final int NUMBER_ORIGIN = 1;
     private static final int NUMBER_BOUND = 100;
     private static Random random = new Random();
 
