@@ -1,52 +1,51 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.GreetGame;
-import hexlet.code.games.ProgressionGame;
-import hexlet.code.games.PrimeGame;
-
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
-import java.util.ArrayList;
 
 public class App {
-    private static List<Game> games;
+    private static List<String> games;
     private static Scanner scanner = new Scanner(System.in);
 
     static {
-        games = new ArrayList<Game>();
-        games.add(new GreetGame());
-        games.add(new EvenGame());
-        games.add(new CalcGame());
-        games.add(new GCDGame());
-        games.add(new ProgressionGame());
-        games.add(new PrimeGame());
+        games = new ArrayList<String>();
+        games.add("Greet");
+        games.add("Even");
+        games.add("Calc");
+        games.add("GCD");
+        games.add("Progression");
+        games.add("Prime");
     }
 
     private static void printMenu() {
         System.out.println("Please enter the game number and press Enter.");
         for (int i = 0; i < games.size(); i++) {
-            System.out.println((i + 1) + " - " + games.get(i).getName());
+            System.out.println((i + 1) + " - " + games.get(i));
         }
+
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
     }
 
-    private static Game chooseGame() {
+    private static String chooseGame() {
         printMenu();
 
-        var i = scanner.nextInt();
-        if (i == 0) {
+        int gameNumber = scanner.nextInt();
+        if (gameNumber == 0) {
             return null;
         }
 
-        return games.get(i - 1);
+        if (gameNumber > games.size()) {
+            System.out.println("Wrong game number!");
+            return null;
+        }
+
+        return games.get(gameNumber - 1);
     }
 
     public static void main(String[] args) {
-        Game currentGame = chooseGame();
+        String currentGame = chooseGame();
 
         if (currentGame == null) {
             return;
@@ -61,6 +60,4 @@ public class App {
             System.out.println("Congratulations, " + player + "!");
         }
     }
-
-
 }
