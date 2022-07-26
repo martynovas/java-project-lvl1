@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GreetGame;
 
@@ -13,8 +14,9 @@ public class App {
 
     static {
         games = new ArrayList();
-        games.add(new EvenGame());
         games.add(new GreetGame());
+        games.add(new EvenGame());
+        games.add(new CalcGame());
     }
 
     private static void printMenu() {
@@ -46,6 +48,13 @@ public class App {
 
         System.out.println("Welcome to the Brain Games!");
         String player = Cli.metting();
-        currentGame.play(player);
+
+        boolean result = Engine.play(currentGame, player);
+
+        if (result) {
+            System.out.println("Congratulations, " + player + "!");
+        }
     }
+
+
 }

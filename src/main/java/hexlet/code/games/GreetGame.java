@@ -9,7 +9,17 @@ public final class GreetGame implements Game {
     }
 
     @Override
-    public void play(String player) {
+    public String getMessage() {
+        return null;
+    }
 
+    @Override
+    public String getNewQuestion() {
+        return null;
+    }
+
+    @Override
+    public String getCurrentAnswer() {
+        return null;
     }
 }
