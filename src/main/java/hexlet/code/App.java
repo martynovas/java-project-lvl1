@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
 import hexlet.code.games.GreetGame;
 
 import java.util.Scanner;
@@ -17,6 +18,7 @@ public class App {
         games.add(new GreetGame());
         games.add(new EvenGame());
         games.add(new CalcGame());
+        games.add(new GCDGame());
     }
 
     private static void printMenu() {

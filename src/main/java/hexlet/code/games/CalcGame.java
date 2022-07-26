@@ -3,12 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Game;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public final class CalcGame implements Game {
     private static final int NUMBER_ORIGIN = 0;
     private static final int NUMBER_BOUND = 100;
-    private static Scanner scanner = new Scanner(System.in);
     private static Random random = new Random();
 
     private Integer a;
