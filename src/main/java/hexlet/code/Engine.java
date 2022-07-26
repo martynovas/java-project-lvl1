@@ -33,9 +33,9 @@ public class Engine {
         System.out.println(game.getMessage());
 
         int round = 1;
-        boolean result = false;
+        boolean result = true;
 
-        while (round <= ROUND_COUNT) {
+        while (round <= ROUND_COUNT && result) {
             result = playRound(game, player);
             round++;
         }
