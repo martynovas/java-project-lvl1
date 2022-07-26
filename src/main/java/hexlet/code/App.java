@@ -4,6 +4,7 @@ import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
 import hexlet.code.games.GreetGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Scanner;
 import java.util.List;
@@ -19,6 +20,7 @@ public class App {
         games.add(new EvenGame());
         games.add(new CalcGame());
         games.add(new GCDGame());
+        games.add(new ProgressionGame());
     }
 
     private static void printMenu() {
